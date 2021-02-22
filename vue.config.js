@@ -1,5 +1,4 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "/radio-player/" : "/",
   transpileDependencies: ["vuetify"],
   chainWebpack: config => {
     config
