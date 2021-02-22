@@ -171,8 +171,8 @@ export default {
           this.selectedRadio.songTitle = item.songTitle;
 
           this.$mediaSession.metadata = new window.MediaMetadata({
-            title: this.selectedRadio.artistTitle + '- ' + this.selectedRadio.songTitle,
-            album: this.selectedRadio.title,
+            title: this.selectedRadio.songTitle,
+            album: this.selectedRadio.artistTitle,
             artwork: [
               {
                 src: this.selectedRadio.smallImg,
