@@ -1,7 +1,6 @@
 {
   "name": "vue-radio-player",
   "version": "1.0.0",
-  "productName": "Radio Player",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -16,6 +15,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-audio": "0.0.12",
     "vue-meta": "^2.4.0",
@@ -24,6 +24,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-pwa": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
     "electron": "^11.0.0",
@@ -55,5 +56,6 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "productName": "Radio Player"
 }
