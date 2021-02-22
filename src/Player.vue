@@ -57,7 +57,7 @@
                   </h2>
 
                   <br />
-                  <audio id="audio-player" controls autoplay>
+                  <audio id="audio-player" controls>
                     <source :src="this.selectedRadio.url" />
                     Your browser does not support the audio tag.
                   </audio>
@@ -127,6 +127,7 @@ export default {
 
       if (this.selectedRadio != null) {
         var audio = document.getElementById("audio-player");
+
         audio.src = selectedItem.url;
       }
 
@@ -142,7 +143,7 @@ export default {
       } else {
         this.$mediaSession.metadata = new window.MediaMetadata({
           title: selectedItem.title,
-          artist: 'Radio Player',
+          artist: "Radio Player",
           artwork: [
             {
               src: selectedItem.smallImg,
@@ -159,6 +160,11 @@ export default {
         });
       }
       this.selectedRadio = selectedItem;
+      setTimeout(function() {
+        var audio = document.getElementById("audio-player");
+        audio.volume = 0.1;
+        audio.play();
+      }, 0);
     },
     updateUI() {
       if (this.selectedRadio && this.selectedRadio.api) {
