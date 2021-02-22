@@ -93,6 +93,8 @@ export default {
         url: "https://18463.live.streamtheworld.com/VIRGIN_RADIO.mp3",
         img:
           "https://upload.wikimedia.org/wikipedia/commons/d/d1/VirginRadio.png",
+        smallImg:
+          "https://upload.wikimedia.org/wikipedia/commons/d/d1/VirginRadio.png",
         artistTitle: null,
         songTitle: null,
         api: null,
@@ -101,6 +103,7 @@ export default {
         title: "Radyo Fenomen",
         url: "https://listen.radyofenomen.com/fenomen/128/icecast.audio",
         img: "https://cdn.radyofenomen.com/artwork/logo20.png",
+        smallImg: null,
         api:
           "https://api.radyofenomen.com/Channels/radyofenomen/?appRef=FenomenWeb&v=1",
         artistTitle: null,
@@ -110,6 +113,7 @@ export default {
         title: "Fenomen Türk",
         url: "https://listen.radyofenomen.com/fenomenturk/128/icecast.audio",
         img: "https://cdn.radyofenomen.com/artwork/logo20.png",
+        smallImg: null,
         api:
           "https://api.radyofenomen.com/Channels/fenomenturk/?appRef=FenomenWeb&v=1",
         artistTitle: null,
@@ -130,12 +134,30 @@ export default {
         axios.get(selectedItem.api).then((response) => {
           var item = response.data.response.timeline[0];
           selectedItem.img = item.albumCoverIMG;
+          selectedItem.smallImg = item.albumCoverIMGSmall;
           selectedItem.artistTitle =
             item.artistTitle + " " + item.artistVisibleExtra;
           selectedItem.songTitle = item.songTitle;
         });
-      }
+      } else {
+        this.$mediaSession.metadata = new window.MediaMetadata({
+          title: selectedItem.title,
+          artist: 'Radio Player',
+          artwork: [
+            {
+              src: selectedItem.smallImg,
+              sizes: "96x96",
+              type: "image/png",
+            },
 
+            {
+              src: selectedItem.img,
+              sizes: "300x300",
+              type: "image/png",
+            },
+          ],
+        });
+      }
       this.selectedRadio = selectedItem;
     },
     updateUI() {
@@ -143,9 +165,28 @@ export default {
         axios.get(this.selectedRadio.api).then((response) => {
           var item = response.data.response.timeline[0];
           this.selectedRadio.img = item.albumCoverIMG;
+          this.selectedRadio.smallImg = item.albumCoverIMGSmall;
           this.selectedRadio.artistTitle =
             item.artistTitle + " " + item.artistVisibleExtra;
           this.selectedRadio.songTitle = item.songTitle;
+
+          this.$mediaSession.metadata = new window.MediaMetadata({
+            title: this.selectedRadio.artistTitle + '- ' + this.selectedRadio.songTitle,
+            album: this.selectedRadio.title,
+            artwork: [
+              {
+                src: this.selectedRadio.smallImg,
+                sizes: "96x96",
+                type: "image/png",
+              },
+
+              {
+                src: this.selectedRadio.img,
+                sizes: "300x300",
+                type: "image/png",
+              },
+            ],
+          });
         });
       }
     },

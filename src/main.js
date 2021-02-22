@@ -5,6 +5,8 @@ import VueMeta from 'vue-meta';
 
 Vue.use(VueMeta)
 
+Vue.prototype.$mediaSession = navigator.mediaSession;
+
 Vue.config.productionTip = false
 
 new Vue({
