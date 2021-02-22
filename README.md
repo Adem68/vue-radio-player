@@ -4,8 +4,7 @@
 
 ## [Demo](https://vue-radio-player.vercel.app/)
 
-Now Playing only supported on some radios
-
+### Now Playing only supported on some radios. Contributions are welcome 🙏
 
 ## Project setup
 ```
