@@ -6,6 +6,8 @@
 
 ### Now Playing only supported on some radios. Contributions are welcome 🙏
 
+<br />
+
 ## Project setup
 ```
 yarn install
