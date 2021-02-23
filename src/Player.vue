@@ -3,7 +3,7 @@
     <v-main class="dark lighten-3">
       <v-container class="mt-10">
         <v-row>
-          <v-col cols="2">
+          <v-col cols="12" xs="12" md="2">
             <v-sheet rounded="lg">
               <v-list-item-group color="">
                 <v-list-item
