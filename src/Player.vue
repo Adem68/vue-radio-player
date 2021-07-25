@@ -112,13 +112,33 @@ export default {
       {
         title: "Fenomen Türk",
         url: "https://listen.radyofenomen.com/fenomenturk/128/icecast.audio",
-        img: "https://cdn.radyofenomen.com/artwork/logo20.png",
+        img: "https://cdn.radyofenomen.com/artwork/logo40.png",
         smallImg: null,
         api:
           "https://api.radyofenomen.com/Channels/fenomenturk/?appRef=FenomenWeb&v=1",
         artistTitle: null,
         songTitle: null,
       },
+      {
+        title: "Fenomen Türkçe Rap",
+        url: "https://listen.radyofenomen.com/fenomenturkrap/96/icecast.audio",
+        img: "https://cdn.radyofenomen.com/artwork/logo58.png",
+        smallImg: null,
+        api:
+          "https://api.radyofenomen.com/Channels/fenomenturkcerap/?appRef=FenomenWeb&v=1",
+        artistTitle: null,
+        songTitle: null,
+      },
+      {
+        title: "Fenomen 2010",
+        url: "https://listen.radyofenomen.com/fenomen2010/128/icecast.audio",
+        img: "https://cdn.radyofenomen.com/artwork/logo67.png",
+        smallImg: null,
+        api:
+          "http://api.radyofenomen.com/Channels/fenomen2010/?appRef=FenomenWeb&v=1",
+        artistTitle: null,
+        songTitle: null,
+      }
     ],
   }),
   methods: {
