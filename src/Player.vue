@@ -65,7 +65,7 @@
               </v-container>
               <v-container v-if="!selectedRadio" fill-height>
                 <v-col align="center">
-                  <h1>Select station from left menu</h1>
+                  <h1>Select station from the menu</h1>
                 </v-col>
               </v-container>
             </v-sheet>
