@@ -122,7 +122,7 @@ export default {
       },
       {
         title: "Pal Station",
-        url: "http://shoutcast.radyogrup.com:1020/live",
+        url: "https://moondigitaledge.radyotvonline.net/palstation/playlist.m3u8",
         img:
           "https://upload.wikimedia.org/wikipedia/tr/thumb/5/51/Pal_Station_logo.png/532px-Pal_Station_logo.png",
         smallImg:
