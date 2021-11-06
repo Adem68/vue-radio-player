@@ -90,7 +90,7 @@ export default {
     items: [
       {
         title: "Virgin Radio",
-        url: "https://18463.live.streamtheworld.com/VIRGIN_RADIO.mp3",
+        url: "https://playerservices.streamtheworld.com/api/livestream-redirect/VIRGIN_RADIO_SC?/;stream.mp3",
         img:
           "https://upload.wikimedia.org/wikipedia/commons/d/d1/VirginRadio.png",
         smallImg:
@@ -108,6 +108,28 @@ export default {
           "https://api.radyofenomen.com/Channels/radyofenomen/?appRef=FenomenWeb&v=1",
         artistTitle: null,
         songTitle: null,
+      },
+      {
+        title: "Metro FM",
+        url: "https://playerservices.streamtheworld.com/api/livestream-redirect/METRO_FM_SC?/;stream.mp3",
+        img:
+          "https://mediacdns.karnaval.com/media/station_media/2/logos/meta_image.png",
+        smallImg:
+          "https://mediacdns.karnaval.com/media/station_media/2/logos/meta_image.png",
+        artistTitle: null,
+        songTitle: null,
+        api: null,
+      },
+      {
+        title: "Pal Station",
+        url: "http://shoutcast.radyogrup.com:1020/live",
+        img:
+          "https://upload.wikimedia.org/wikipedia/tr/thumb/5/51/Pal_Station_logo.png/532px-Pal_Station_logo.png",
+        smallImg:
+          "https://upload.wikimedia.org/wikipedia/tr/thumb/5/51/Pal_Station_logo.png/532px-Pal_Station_logo.png",
+        artistTitle: null,
+        songTitle: null,
+        api: null,
       },
       {
         title: "Fenomen Türk",
