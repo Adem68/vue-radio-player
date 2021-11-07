@@ -121,17 +121,6 @@ export default {
         api: null,
       },
       {
-        title: "Pal Station",
-        url: "https://moondigitaledge.radyotvonline.net/palstation/playlist.m3u8",
-        img:
-          "https://upload.wikimedia.org/wikipedia/tr/thumb/5/51/Pal_Station_logo.png/532px-Pal_Station_logo.png",
-        smallImg:
-          "https://upload.wikimedia.org/wikipedia/tr/thumb/5/51/Pal_Station_logo.png/532px-Pal_Station_logo.png",
-        artistTitle: null,
-        songTitle: null,
-        api: null,
-      },
-      {
         title: "Fenomen Türk",
         url: "https://listen.radyofenomen.com/fenomenturk/128/icecast.audio",
         img: "https://cdn.radyofenomen.com/artwork/logo40.png",
